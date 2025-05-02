@@ -1,75 +1,48 @@
-# Nuxt Minimal Starter
+# Rayuma Living 🏡
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![Nuxt 3](https://img.shields.io/badge/Nuxt-3.17.1-green?style=flat-square&logo=nuxt.js)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-4.0.0-blue?style=flat-square&logo=tailwindcss)
+![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)
 
-## Setup
+Rayuma Living is a modern and elegant real estate landing page built with [Nuxt 3](https://nuxt.com) and [Tailwind CSS 4](https://tailwindcss.com/). This project focuses on delivering a high-performance static site ideal for property agencies to showcase premium housing options.
 
-Make sure to install dependencies:
+---
+
+## ✨ Features
+
+- ⚡ Static Site Generation (SSG) with Nuxt 3
+- 💎 Elegant layout tailored for real estate brands
+- 🎨 Tailwind CSS 4-based custom styling
+- 📱 Responsive design for mobile & desktop
+- 🧱 Component-based structure
+- 💻 SEO-friendly HTML output
+- 🔗 Clean code and scalable folder structure
+
+---
+
+## 🖼️ Preview
+
+> Coming Soon — will update after deployment
+
+---
+
+## 🚀 Tech Stack
+
+- [Nuxt 3.17.1](https://nuxt.com/)
+- [Vue 3.5.13](https://vuejs.org/)
+- [Tailwind CSS 4.0.0](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+
+---
+
+## 📦 Setup & Development
 
 ```bash
-# npm
+# Install dependencies
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Start dev server
 npm run dev
 
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# Generate static build
+npm run generate
