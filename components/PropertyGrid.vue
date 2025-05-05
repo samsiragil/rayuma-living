@@ -1,113 +1,86 @@
 <template>
-  <section id="properties" class="pt-24 pb-28 px-4 bg-zinc-50">
-    <div class="max-w-screen-xl mx-auto">
-      <div class="text-center mb-10">
+  <section class="py-16 bg-white">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="text-center mb-10" data-aos="fade-up">
         <h2 class="text-3xl lg:text-4xl font-serif font-semibold text-[#D4AF37] leading-snug">Our Exclusive Listings</h2>
         <p class="text-base lg:text-lg text-[#3f3f3f] mt-2">
           Discover handpicked properties from Bali's most prestigious locations.
         </p>
       </div>
 
-      <div class="relative">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div
-          ref="slider"
-          class="keen-slider overflow-visible"
+          v-for="(property, index) in properties"
+          :key="index"
+          class="relative rounded-3xl overflow-hidden shadow-xl group"
+          data-aos="zoom-in"
         >
-          <div
-            v-for="(property, index) in properties"
-            :key="index"
-            class="keen-slider__slide px-4 relative rounded-xl overflow-hidden shadow-md group"
-          >
+          <div class="overflow-hidden relative h-[420px]">
             <img
-              :src="`/images/property-${index + 1}.jpg`"
+              :src="`/images/${property.image}`"
               :alt="property.title"
-              class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
             />
-            <div
-              class="absolute inset-0 bg-black/50 flex flex-col justify-end p-5"
-            >
-              <div class="text-white mb-4">
-                <h3 class="text-lg font-semibold leading-tight">{{ property.title }}</h3>
-                <p class="text-sm opacity-90">Location : {{ property.location }}</p>
-                <p class="text-sm opacity-90">Price : {{ property.price }}</p>
-              </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition duration-700 ease-out group-hover:from-black/90" />
+            <div class="absolute bottom-0 w-full p-6 z-10 flex flex-col gap-3">
+              <h3 class="text-white text-lg lg:text-xl font-serif font-medium tracking-wide leading-snug">
+                {{ property.name }}
+              </h3>
+              <p class="text-white/80 text-sm leading-tight">
+                Location: {{ property.location }}
+              </p>
+              <p class="text-[#D4AF37] text-lg lg:text-xl font-semibold tracking-wide">
+                {{ property.price }}
+              </p>
               <button
-                class="w-full bg-[#bfa76f]/90 hover:bg-[#bfa76f] text-white text-sm font-medium py-2 rounded-full transition-colors"
+                class="mt-1 px-6 py-3 bg-white/10 text-white border border-[#bfa76f] rounded-full tracking-wide 
+                hover:bg-[#bfa76f] hover:text-white hover:shadow-xl transition-all duration-500 ease-in-out backdrop-blur-sm"
               >
-                Details
+                View Details
               </button>
             </div>
           </div>
         </div>
-
-        <!-- Navigation -->
-        <button
-          @click="prevSlide"
-          class="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-[#bfa76f] text-[#bfa76f] bg-white hover:bg-[#bfa76f] hover:text-white transition shadow"
-        >
-          <ChevronLeft class="w-5 h-5 mx-auto" />
-        </button>
-        <button
-          @click="nextSlide"
-          class="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full border border-[#bfa76f] text-[#bfa76f] bg-white hover:bg-[#bfa76f] hover:text-white transition shadow"
-        >
-          <ChevronRight class="w-5 h-5 mx-auto" />
-        </button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
-import KeenSlider from 'keen-slider'
-import 'keen-slider/keen-slider.min.css'
-
-const slider = ref(null)
-let keenInstance = null
+import { MoveRight } from 'lucide-vue-next'
 
 const properties = [
-  { title: 'Sunset Garden Villa', location: 'Kerobokan, Bali', price: 520000 },
-  { title: 'Minimalist River House', location: 'Tabanan, Bali', price: 470000 },
-  { title: 'Royal Hill Residence', location: 'Jimbaran Hills, Bali', price: 750000 },
-  { title: 'Ocean Breeze Penthouse', location: 'Pantai Berawa, Canggu', price: 690000 },
-  { title: 'Tropical Jungle Hideaway', location: 'Jalan Sweta, Ubud', price: 410000 },
-  { title: 'Seminyak Luxe Estate', location: 'Jalan Kayu Aya, Seminyak', price: 980000 },
-  { title: 'Clifftop Infinity Villa', location: 'Jalan Goa Gong, Jimbaran', price: 820000 },
-  { title: 'Balangan Oceanview Home', location: 'Balangan Beach, Bali', price: 615000 },
-  { title: 'Ubud Bamboo Residence', location: 'Tegallalang, Ubud', price: 390000 },
-  { title: 'Alila Clifftop Retreat', location: 'Pecatu, Bali', price: 1120000 },
+  {
+    name: 'Luxury Modern Villa',
+    location: 'Sunset Bay, Bali',
+    price: '$350,000',
+    image: 'property-1.jpg',
+  },
+  {
+    name: 'The Uluwatu Residence',
+    location: 'Uluwatu, Bali',
+    price: '$720,000',
+    image: 'property-2.jpg',
+  },
+  {
+    name: 'Seminyak Garden Loft',
+    location: 'Seminyak, Bali',
+    price: '$490,000',
+    image: 'property-3.jpg',
+  },
+  {
+    name: 'Canggu Beachfront Estate',
+    location: 'Canggu, Bali',
+    price: '$1,100,000',
+    image: 'property-4.jpg',
+  },
 ]
-
-onMounted(() => {
-  keenInstance = new KeenSlider(slider.value, {
-    loop: false,
-    slides: {
-      perView: 4,
-      spacing: 32,
-    },
-    breakpoints: {
-      '(max-width: 1024px)': {
-        slides: { perView: 1.2, spacing: 16 },
-      },
-      '(max-width: 640px)': {
-        slides: { perView: 1.1, spacing: 12 },
-      },
-    },
-  })
-})
-
-const nextSlide = () => {
-  keenInstance?.next()
-}
-const prevSlide = () => {
-  keenInstance?.prev()
-}
 </script>
 
 <style scoped>
-.keen-slider__slide {
-  flex-shrink: 0;
+/* Optional: smooth hover effect on card */
+.group:hover img {
+  transform: scale(1.02);
+  transition: transform 0.5s ease;
 }
 </style>
