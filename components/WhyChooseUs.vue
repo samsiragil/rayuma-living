@@ -1,42 +1,55 @@
 <template>
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-5xl mx-auto text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Why Choose Rayuma Living?</h2>
-      <p class="mt-2 text-gray-600">
-        We go beyond listings — we deliver experiences, trust, and homes that inspire.
-      </p>
-    </div>
+  <section class="pt-24 pb-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+      <!-- Image -->
+      <div class="w-full lg:w-1/2">
+        <img
+          src="/images/property-10.jpg"
+          alt="Luxury Experience"
+          class="rounded-2xl shadow-xl object-cover w-full h-full max-h-[500px]"
+        />
+      </div>
 
-    <div class="grid gap-10 md:grid-cols-3 max-w-6xl mx-auto">
-      <div v-for="(item, index) in reasons" :key="index" class="text-center px-6">
-        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-emerald-100 flex items-center justify-center">
-          <component :is="item.icon" class="w-6 h-6 text-emerald-600" />
-        </div>
-        <h3 class="text-lg font-semibold text-gray-800">{{ item.title }}</h3>
-        <p class="text-gray-600 mt-2">{{ item.description }}</p>
+      <!-- Text Content -->
+      <div class="w-full lg:w-1/2 space-y-6">
+        <h2 class="text-3xl lg:text-4xl font-serif font-semibold text-[#bfa76f] leading-snug">
+          Why Choose Rayuma Living?
+        </h2>
+        <p class="text-base lg:text-lg text-[#3f3f3f] mt-2">
+          We provide a seamless and luxurious property experience in Bali, tailored to your lifestyle
+          and investment goals.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-4">
+            <ShieldCheck class="text-[#B19857] w-6 h-6 mt-1" />
+            <span class="text-base text-gray-700">
+              Trusted by over 500+ high-net-worth clients
+            </span>
+          </li>
+          <li class="flex items-start gap-4">
+            <Gem class="text-[#B19857] w-6 h-6 mt-1" />
+            <span class="text-base text-gray-700">
+              Curated collection of exclusive luxury properties
+            </span>
+          </li>
+          <li class="flex items-start gap-4">
+            <PhoneCall class="text-[#B19857] w-6 h-6 mt-1" />
+            <span class="text-base text-gray-700">
+              Dedicated concierge team and personalized service
+            </span>
+          </li>
+          <li class="flex items-start gap-4">
+            <Stars class="text-[#B19857] w-6 h-6 mt-1" />
+            <span class="text-base text-gray-700">
+              Exceptional market knowledge and legal support
+            </span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ShieldCheckIcon, UsersIcon, HomeIcon } from 'lucide-vue-next'
-
-const reasons = [
-  {
-    title: 'Trusted Expertise',
-    description: 'Over 10 years of real estate experience with deep local insight.',
-    icon: ShieldCheckIcon
-  },
-  {
-    title: 'Tailored Service',
-    description: 'Personalized assistance to match you with the perfect property.',
-    icon: UsersIcon
-  },
-  {
-    title: 'Curated Listings',
-    description: 'Only premium, verified properties make it into our portfolio.',
-    icon: HomeIcon
-  }
-]
+import { ShieldCheck, Stars, Gem, PhoneCall } from 'lucide-vue-next'
 </script>
