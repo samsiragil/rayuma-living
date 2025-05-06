@@ -33,8 +33,8 @@
                 {{ property.price }}
               </p>
               <button
-                class="mt-1 px-6 py-3 bg-white/10 text-white border border-[#bfa76f] rounded-full tracking-wide 
-                hover:bg-[#bfa76f] hover:text-white hover:shadow-xl transition-all duration-500 ease-in-out backdrop-blur-sm"
+                class="mt-1 px-6 py-3 bg-white/10 text-white border border-[#D4AF37] rounded-full tracking-wide 
+                hover:bg-[#D4AF37] hover:text-black hover:shadow-xl transition-all duration-500 ease-in-out backdrop-blur-sm"
               >
                 View Details
               </button>
