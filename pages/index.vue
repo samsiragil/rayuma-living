@@ -1,8 +1,8 @@
 <template>
   <HeroSection />
+  <AboutUs />
   <PropertyGrid />
   <WhyChooseUs />
-  <AboutUs />
   <ContactSection />
   <Footer />
 </template>
