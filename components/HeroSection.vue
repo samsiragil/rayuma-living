@@ -1,7 +1,7 @@
 <template>
   <header
     class="absolute top-6 left-1/2 transform -translate-x-1/2 w-full z-50 px-6">
-    <div class="max-w-screen-xl mx-auto" data-aos="fade-down">
+    <div class="max-w-screen-xl mx-auto">
       <nav
         class="flex justify-between items-center py-4 border-b border-white/10">
         <!-- Logo + Brand Name -->
@@ -64,17 +64,17 @@
       class="relative z-10 max-w-screen-xl mx-auto w-full translate-y-9 transition-all duration-1000"
       >
       <h1
-        class="text-4xl md:text-8xl font-serif font-semibold text-[#f5f5f5] tracking-tight leading-loose mb-6 text-balance" data-aos="fade-right">
+        class="text-4xl md:text-8xl font-serif font-semibold text-[#f5f5f5] tracking-tight leading-loose mb-6 text-balance" data-aos="fade-up">
         Invest in Timeless
         <br />
         Tranquility
       </h1>
 
-      <p class="mb-8 text-base lg:text-lg text-[#f5f1e6]/90 max-w-xl" data-aos="fade-right">
+      <p class="mb-8 text-base lg:text-lg text-[#f5f1e6]/90 max-w-xl" data-aos="fade-up">
         Curated properties in Bali for investors seeking peace, profit, and permanence.
       </p>
 
-      <div class="flex gap-12" data-aos="fade-left">
+      <div class="flex gap-12" data-aos="fade-up">
         <button class="group flex flex-col items-star">
           <div
             class="flex items-center gap-4 text-md text-[#f5f5f5] group-hover:text-[#bfa76f] transition-colors duration-300">

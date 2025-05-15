@@ -2,7 +2,7 @@
   <section class="bg-[#FAF8F3] py-32 px-4">
     <div class="max-w-screen-xl mx-auto grid md:grid-cols-2 gap-20 items-center">
       <!-- Image Area (rebalanced proportion) -->
-      <div class="relative rounded-xl overflow-hidden shadow-xl border border-[#D4C29A] min-h-[540px]" data-aos="fade-right" data-aos-duration="1300">
+      <div class="relative rounded-xl overflow-hidden shadow-xl border border-[#D4C29A] min-h-[540px]" data-aos="zoom-in" data-aos-duration="1300">
         <img
           src="/images/property-3.jpg"
           alt="Elegant tropical living room"
@@ -13,12 +13,12 @@
       <!-- Content Area (center-aligned vertically) -->
       <div class="flex flex-col justify-center h-full">
         <!-- Top line -->
-        <div class="w-16 h-1 bg-[#D4C29A] mb-6" data-aos="fade-down" data-aos-duration="600"></div>
+        <div class="w-16 h-1 bg-[#D4C29A] mb-6" data-aos="fade-up" data-aos-delay="0"></div>
 
-        <h2 class="text-4xl font-serif text-[#5E4B3C] font-bold tracking-wide leading-snug mb-4" data-aos="fade-up" data-aos-duration="800">
+        <h2 class="text-4xl font-serif text-[#5E4B3C] font-bold tracking-wide leading-snug mb-4" data-aos="fade-up" data-aos-delay="100">
           An Exclusive Sanctuary in the Heart of Tropical Living
         </h2>
-        <p class="text-[#1E1E1E] text-base leading-relaxed tracking-wide mb-10 max-w-md" data-aos="fade-up" data-aos-duration="800">
+        <p class="text-[#1E1E1E] text-base leading-relaxed tracking-wide mb-10 max-w-md" data-aos="fade-up" data-aos-delay="300">
           Invest in a space where elegance meets tropical soul. Designed to deliver long-term value for refined hospitality.
         </p>
 
@@ -28,7 +28,7 @@
             v-for="(item, index) in values"
             :key="index"
             class="group bg-[#F5F3ED] rounded-md px-5 py-4 transition shadow-sm hover:shadow-md hover:-translate-y-[2px] relative"
-            data-aos="fade-up" data-aos-duration="1200"
+            data-aos="fade-up" data-aos-delay="350"
           >
             <!-- Pattern / line embellishment -->
             <div class="absolute left-0 top-4 bottom-4 w-[2px] bg-[#D4C29A]/40 rounded-full group-hover:bg-[#D4C29A] transition"></div>
